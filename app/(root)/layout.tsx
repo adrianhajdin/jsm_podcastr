@@ -29,10 +29,10 @@ export default function RootLayout({
             </div>
             <div className="flex flex-col md:pb-14">
               <Toaster />
-              <ConvexClientProvider>
+              
 
               {children}
-              </ConvexClientProvider>
+              
             </div>
           </div>
         </section>
