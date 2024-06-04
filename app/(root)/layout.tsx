@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Toaster } from "@/components/ui/toaster"
 import PodcastPlayer from "@/components/PodcastPlayer";
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,8 +29,10 @@ export default function RootLayout({
             </div>
             <div className="flex flex-col md:pb-14">
               <Toaster />
+              
 
               {children}
+              
             </div>
           </div>
         </section>

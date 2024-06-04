@@ -2,6 +2,8 @@
 import PodcastCard from '@/components/PodcastCard'
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import { ImageURL } from 'openai/resources/beta/threads/messages.mjs';
+import { string } from 'zod';
 
 const Home = () => {
   const trendingPodcasts = useQuery(api.podcasts.getTrendingPodcasts);
@@ -15,11 +17,10 @@ const Home = () => {
           {trendingPodcasts?.map(({ _id, podcastTitle, podcastDescription, imageUrl }) => (
             <PodcastCard 
               key={_id}
-              imgUrl={imageUrl}
+
               title={podcastTitle}
               description={podcastDescription}
-              podcastId={_id}
-            />
+              podcastId={_id} imgUrl={''}            />
           ))}
         </div>
       </section>
